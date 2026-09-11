@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #400101;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+.navbar {
+    width: 100%;
+    padding: 5px 50px;
+    display: flex;
+    align-items: center;
+    background: rgba(64, 1, 1, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(242, 145, 61, 0.25);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navlogo {
+    display: flex;
+    align-items: center;
+}
+.navlogo img {
+    width: 80px;
+    height: auto;
+}
+.navlinks {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+.navlinks a:hover {
+    color: #BF3604;
+}
+#home {
+    min-height: 100vh;
+    padding: 100px 50px;
+    color: white;
+    text-align: center;
+}
+#home h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+#home p {
+    font-size: 18px;
+}
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: rgba(169, 57, 57, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.searchbar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+.movie-section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    color: white;
+    text-align: center;
+}
+.movie-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.tab-button {
+    margin-top: 12px;
+    padding: 12px 25px;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.tab-button:hover {
+    color: #F2913D;
+    transform: scale(1.08);
+}
+.tab-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F2913D;
+    transition: 0.3s ease;
+}
+.tab-button:hover::after {
+    width: 100%;
+}
+.movie-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 12px;
+    background: rgba(115, 12, 2, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(242, 145, 61, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: 0.3s;
+}
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.5);
+}
+.movie-card img {
+    width: 100%;
+    height: 325x;
+    object-fit: cover;
+}
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    padding: 10px 16px 8px 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.movie-info h2 {
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    height: 55px;
+    text-align: left;            
+    width: 100%;    
+}
+.movie-info p {
+    color: #dddddd;
+    font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+.movie-info a{
+    margin-top: 0;
+    margin-bottom: 4px;
+    align-self: flex-start;
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #dddddd;
+    border: none        ;
+    border-radius: 8px;
+    color: #400101;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+.movie-info a:hover {
+    background-color: #F2913D;
+    color: #400101;
+    transform: translateY(-3px);    
+}
+
